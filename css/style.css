@@ -1,0 +1,189 @@
+:root {
+  background-color: white;
+  font-family: 'Verdana', 'Arial', sans-serif;
+}
+
+/*:root i html su isti selektori osim sto :root ima higher specificity: (0, 0, 1, 0) vs (0, 0, 0, 1)*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  border-top: 7px solid black;
+}
+
+.clear {
+  clear: both;
+  width: 0;
+  height: 0;
+}
+input[placeholder]{
+  font-style: italic;
+}
+
+a:link, :visited {
+  color: gray;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+header {
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+#top_container {
+  min-height: 30px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+#search_bar {
+  float: left;
+}
+
+#search_bar input {
+  border-style: none;
+  width: 400px;
+  padding-left: 35px;
+}
+
+#cart {
+    float: right;
+}
+
+#cart a {
+  color: lightgray;
+  margin-right: 12px;
+}
+#logo {
+  width: 100%;
+  clear: both;
+  border-bottom: 1px solid lightgray;
+}
+
+#logo img {
+  width: 100px;
+}
+
+nav {
+
+}
+
+nav ul {
+
+}
+
+nav ul li {
+  float: right;
+  padding-right: 15px;
+}
+nav ul li a:hover {
+  color: black;
+}
+
+#currency select {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  height: 29px;
+  padding: 5px; /* If you add too much padding here, the options won't show in IE */
+  width: 100px;
+  float: right;
+}
+
+#container {
+  width: 1000px;
+  padding: 10px;
+  margin: auto;
+  background-color: transparent;
+  box-shadow: 2px 2px 5px #888;
+}
+
+aside {
+  font-size: 15px;
+  width: 150px;
+  text-align: center;
+  float: left;
+  margin-right: 50px;
+}
+
+#log {
+  width: 180px;
+  padding: 3px;
+  margin-top: 80px;
+}
+
+#log input {
+  border: none;
+  border-bottom: 1px solid lightgray;
+  text-align: center;
+}
+
+#log input[type="submit"]{
+  background-color: rgb(212, 214, 208);
+  border: 1px solid rgb(159, 160, 163);
+  color: darkgray;
+  border-radius: 5px;
+}
+
+#log input[type="submit"]:hover {
+  border: 1px solid rgb(7, 35, 226);
+  background-color: rgb(149, 182, 255);
+  color: rgb(7, 35, 226);
+}
+
+main {
+  width: 800px;
+  float: left;
+  font-size: 15px;
+  text-align: center;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.item {
+    width: 160px;
+    min-height: 120px;
+    max-height: auto;
+    float: left;
+    margin: 9px;
+    padding: 3px;
+    border: 1px solid lightgray;
+    text-align: center;
+}
+
+.shipping {
+  background-color: #F0EEEE;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  color: rgba(21, 27, 28, 0.68);
+  font-size: 12px;
+}
+
+.shipping span {
+  margin-right: 50px;
+}
+
+.shipping img {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: rgb(216, 219, 219);
+  padding: 5px;
+}
