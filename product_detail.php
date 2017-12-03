@@ -11,6 +11,11 @@ function body(){
 		<input type="hidden" name="product_id" value="<?=$product->id?>">
 		<input type="submit" value="Compare">
 	</form>
+
+	<form action="cart-add.php" method="POST">
+		<input type="hidden" name="product_id" value="<?=$product->id?>">
+		<input type="submit" value="Add to cart">
+	</form>
 <?php
 }
 require_once('base.php');

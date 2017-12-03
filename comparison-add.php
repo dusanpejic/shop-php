@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once('src/init.php');
 if (!isset($_SESSION['product_ids'])){
   $_SESSION['product_ids'] = array();
 }

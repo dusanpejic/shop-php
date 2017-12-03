@@ -1,6 +1,12 @@
 <?php
 require_once ('src/init.php');
 
+  $session_id = session_id();
+  if($session_id){
+    $cart_items = CartItem::filterBySessionID($session_id);
+  } else {
+    $cart_items = array();
+  }
 
 
 $brands = Brand::all();
@@ -21,16 +27,12 @@ $brands = Brand::all();
                 <input type="text" placeholder="Search...">
               </div>
 
-              <div id="currency">
-                <select>
-                  <option>EUR</option>
-                  <option>RSD</option>
-                  <option>USD</option>
-                <select>
-              </div>
-
               <div id="cart">
-                <a href="#cart.php"<span>Cart (0)</span></a> <a href="#checkout.php"><span>Checkout</span></a>
+                <a href="cart.php"<span>Cart(<?=sizeof($cart_items)?>)</span></a>
+								<?php if(sizeof($cart_items) >= 1){
+									echo "<a href='#checkout.php'><span>Checkout</span></a>";
+								}
+								?>
               </div>
           </div> <!-- end of top_container -->
 

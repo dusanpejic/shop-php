@@ -1,8 +1,5 @@
 <?php
-
 require_once ('src/init.php');
-
-
 
 function body(){
 	if(isset($_GET['brand_id'])){
