@@ -10,7 +10,7 @@ function body(){
   }
 
 ?>
-	<h2>Compare</h2>
+	<h2>Cart</h2>
 <?php
 	foreach($cart_items as $item) {
     $product = $item->getProduct();

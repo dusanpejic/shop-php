@@ -24,13 +24,15 @@ $brands = Brand::all();
         <header>
           <div id="top_container">
               <div id="search_bar">
-                <input type="text" placeholder="Search...">
+							<form action="index.php" method="GET">
+                <input name="q" type="text" placeholder="Search...">
+							</form>
               </div>
 
               <div id="cart">
                 <a href="cart.php"<span>Cart(<?=sizeof($cart_items)?>)</span></a>
 								<?php if(sizeof($cart_items) >= 1){
-									echo "<a href='#checkout.php'><span>Checkout</span></a>";
+									echo "<a href='checkout.php'><span>Checkout</span></a>";
 								}
 								?>
               </div>

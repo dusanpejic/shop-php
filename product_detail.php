@@ -3,10 +3,13 @@ require_once ('src/init.php');
 
 function body(){
 	$product = Product::get($_GET['id']);
-	echo "Name: {$product->name} <br>
+	$brand = Brand::get($product->brand_id);
+	echo "<img src='{$product->image_large}' width='600' alt='image'><br>
+				Name: {$product->name} <br>
 				Price:{$product->price} <br>
-				Brand:{$product->brand_id}";
+				Brand:{$brand->name}";
 ?>
+
 	<form action="comparison-add.php" method="POST">
 		<input type="hidden" name="product_id" value="<?=$product->id?>">
 		<input type="submit" value="Compare">
@@ -16,6 +19,7 @@ function body(){
 		<input type="hidden" name="product_id" value="<?=$product->id?>">
 		<input type="submit" value="Add to cart">
 	</form>
+
 <?php
 }
 require_once('base.php');
